@@ -8,7 +8,13 @@ library("tidyverse")
 library("GGally")
 
 # Import data:
-housePrice <- read.table("https://raw.githubusercontent.com/gedeck/practical-statistics-for-data-scientists/master/data/house_sales.csv", header=T)
+dat <- read.table("https://raw.githubusercontent.com/gedeck/practical-statistics-for-data-scientists/master/data/house_sales.csv", header=T)
+
+# Save to file
+saveRDS(dat, "housePrice.rds")
+
+# Load in data
+dat <- readRDS("housePrice.rds")
 
 # Exploring data:
 dim(housePrice)
@@ -17,10 +23,12 @@ head(housePrice)
 summary(housePrice)
 unique(housePrice$PropertyType)
 
-# Pairs
-pairs(housePrice[,c(2,8,9,11,12,13)])
-ggpairs(housePrice[,c(2,8,9,11,12,13)])
+# Transform date column:
+dat <- dat %>%
+  mutate(Ddate = as.Date(dat$DocumentDate))
 
 # Price per size:
+ggpairs(dat[,c(8,10,11,12)])
 
-# Price per 
+# Price per units:
+ggpairs(dat[,c(8,9,13,14)])
