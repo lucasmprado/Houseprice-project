@@ -1,0 +1,277 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{graphicx,textcomp}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage[reqno]{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{amssymb,enumerate}
+\usepackage[all]{xy}
+\usepackage{endnotes}
+\usepackage{lscape}
+\newtheorem{com}{Comment}
+\usepackage{float}
+\usepackage{hyperref}
+\newtheorem{lem} {Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{cor}{Corollary}
+\newtheorem{obs}{Observation}
+\usepackage[compact]{titlesec}
+\usepackage{dcolumn}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{multirow}
+\usepackage{xcolor}
+\newcolumntype{.}{D{.}{.}{-1}}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\definecolor{light-gray}{gray}{0.65}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\newcommand{\Sref}[1]{Section~\ref{#1}}
+\newtheorem{hyp}{Hypothesis}
+
+\title{Adjusted Sale Price}
+\date{9 Nov. 2022}
+\author{Quantitative Methods 1}
+
+\begin{document}
+	\maketitle
+
+\begin{table}[!htbp] \centering 
+	\caption{Adjusted Sale Price and Square Feet of Total Living Area} 
+	\label{} 
+	\begin{tabular}{@{\extracolsep{5pt}}lc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-2} 
+		\\[-1.8ex] & AdjSalePrice \\ 
+		\hline \\[-1.8ex] 
+		SqFtTotLiving & 294.357$^{***}$ \\ 
+		& (2.132) \\ 
+		& \\ 
+		Constant & $-$47,126.100$^{***}$ \\ 
+		& (4,843.068) \\ 
+		& \\ 
+		\hline \\[-1.8ex] 
+		Observations & 20,340 \\ 
+		R$^{2}$ & 0.484 \\ 
+		Adjusted R$^{2}$ & 0.484 \\ 
+		Residual Std. Error & 278,257.400 (df = 20338) \\ 
+		F Statistic & 19,053.750$^{***}$ (df = 1; 20338) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+	\caption{Adjusted Sale Price and Square Feet of Total Living Area, Property Type} 
+	\label{} 
+	\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-3} 
+		\\[-1.8ex] & \multicolumn{2}{c}{AdjSalePrice} \\ 
+		\\[-1.8ex] & (1) & (2)\\ 
+		\hline \\[-1.8ex] 
+		SqFtTotLiving & 294.357$^{***}$ & 298.227$^{***}$ \\ 
+		& (2.132) & (2.169) \\ 
+		& & \\ 
+		PropertyTypeSingle Family &  & 46,449.070$^{**}$ \\ 
+		&  & (18,461.260) \\ 
+		& & \\ 
+		PropertyTypeTownhouse &  & 114,783.100$^{***}$ \\ 
+		&  & (19,734.790) \\ 
+		& & \\ 
+		Constant & $-$47,126.100$^{***}$ & $-$106,247.400$^{***}$ \\ 
+		& (4,843.068) & (18,954.860) \\ 
+		& & \\ 
+		\hline \\[-1.8ex] 
+		Observations & 20,340 & 20,340 \\ 
+		R$^{2}$ & 0.484 & 0.486 \\ 
+		Adjusted R$^{2}$ & 0.484 & 0.486 \\ 
+		Residual Std. Error & 278,257.400 (df = 20338) & 277,655.200 (df = 20336) \\ 
+		F Statistic & 19,053.750$^{***}$ (df = 1; 20338) & 6,408.929$^{***}$ (df = 3; 20336) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+	\caption{Adjusted Sale Price and Square Feet of Total Living Area, Bedrooms} 
+	\label{} 
+	\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-3} 
+		\\[-1.8ex] & \multicolumn{2}{c}{AdjSalePrice} \\ 
+		\\[-1.8ex] & (1) & (2)\\ 
+		\hline \\[-1.8ex] 
+		SqFtTotLiving & 294.357$^{***}$ & 335.089$^{***}$ \\ 
+		& (2.132) & (2.615) \\ 
+		& & \\ 
+		Bedrooms &  & $-$68,798.810$^{***}$ \\ 
+		&  & (2,638.022) \\ 
+		& & \\ 
+		Constant & $-$47,126.100$^{***}$ & 99,791.830$^{***}$ \\ 
+		& (4,843.068) & (7,377.859) \\ 
+		& & \\ 
+		\hline \\[-1.8ex] 
+		Observations & 20,340 & 20,340 \\ 
+		R$^{2}$ & 0.484 & 0.500 \\ 
+		Adjusted R$^{2}$ & 0.484 & 0.500 \\ 
+		Residual Std. Error & 278,257.400 (df = 20338) & 273,724.600 (df = 20337) \\ 
+		F Statistic & 19,053.750$^{***}$ (df = 1; 20338) & 10,185.080$^{***}$ (df = 2; 20337) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+\end{table} 
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{l c c c}
+			\hline
+			& Model 1 & Model 2 & Model 3 \\
+			\hline
+			(Intercept)                   & $-47126.10^{***}$ & $-220312.25^{**}$  & $-163348.36^{*}$    \\
+			& $(4843.07)$       & $(78528.33)$       & $(76018.22)$        \\
+			SqFtTotLiving                 & $294.36^{***}$    & $340.83^{***}$     & $309.92^{***}$      \\
+			& $(2.13)$          & $(2.66)$           & $(3.44)$            \\
+			Bedrooms\_21                  &                   & $254211.22^{**}$   & $231828.50^{**}$    \\
+			&                   & $(81850.32)$       & $(79176.19)$        \\
+			Bedrooms\_22                  &                   & $216175.02^{**}$   & $214089.92^{**}$    \\
+			&                   & $(78603.80)$       & $(76045.44)$        \\
+			Bedrooms\_23                  &                   & $100217.36$        & $133805.66$         \\
+			&                   & $(78475.15)$       & $(75976.65)$        \\
+			Bedrooms\_24                  &                   & $6573.01$          & $65783.74$          \\
+			&                   & $(78537.04)$       & $(76045.30)$        \\
+			Bedrooms\_25                  &                   & $-158.84$          & $31128.85$          \\
+			&                   & $(78887.92)$       & $(76368.34)$        \\
+			Bedrooms\_26                  &                   & $-11669.39$        & $-71588.20$         \\
+			&                   & $(80785.43)$       & $(78249.34)$        \\
+			Bedrooms\_27                  &                   & $141517.25$        & $6772.36$           \\
+			&                   & $(90161.87)$       & $(87419.75)$        \\
+			Bedrooms\_28                  &                   & $-423184.22^{***}$ & $-781268.63^{***}$  \\
+			&                   & $(116685.88)$      & $(113692.07)$       \\
+			Bedrooms\_29+                 &                   & $-664734.81^{***}$ & $-1340662.08^{***}$ \\
+			&                   & $(120031.69)$      & $(120308.65)$       \\
+			Bathrooms\_21 - 2 baths       &                   &                    & $-20312.59^{**}$    \\
+			&                   &                    & $(6222.65)$         \\
+			Bathrooms\_22 - 3 baths       &                   &                    & $-70917.04^{***}$   \\
+			&                   &                    & $(6812.91)$         \\
+			Bathrooms\_23 - 4 baths       &                   &                    & $38695.43^{***}$    \\
+			&                   &                    & $(10480.45)$        \\
+			Bathrooms\_24 - 5 baths       &                   &                    & $330410.08^{***}$   \\
+			&                   &                    & $(20689.06)$        \\
+			Bathrooms\_25 - 6 baths       &                   &                    & $755850.67^{***}$   \\
+			&                   &                    & $(44694.39)$        \\
+			Bathrooms\_2More than 6 baths &                   &                    & $1540805.26^{***}$  \\
+			&                   &                    & $(73323.31)$        \\
+			\hline
+			R$^2$                         & $0.48$            & $0.51$             & $0.54$              \\
+			Adj. R$^2$                    & $0.48$            & $0.51$             & $0.54$              \\
+			Num. obs.                     & $20340$           & $20340$            & $20340$             \\
+			\hline
+			\multicolumn{4}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+		\end{tabular}
+		\caption{Statistical models}
+		\label{table:coefficients}
+	\end{center}
+\end{table}
+
+\begin{table}[!htbp] \centering
+	\caption{Impact of SqFtLot on AdjSalePrice}
+	\label{}
+	\begin{tabular}{@{\extracolsep{5pt}}lc}
+		\\[-1.8ex]\hline
+		\hline \\[-1.8ex]
+		& \multicolumn{1}{c}{\textit{Dependent variable:}} \\
+		\cline{2-2}
+		\\[-1.8ex] & AdjSalePrice \\
+		\hline \\[-1.8ex]
+		SqFtLot & 1.887$^{***}$ \\
+		& (0.093) \\
+		& \\
+		Constant & 542,505.900$^{***}$ \\
+		& (2,903.559) \\
+		& \\
+		\hline \\[-1.8ex]
+		Observations & 20,340 \\
+		R$^{2}$ & 0.020 \\
+		Adjusted R$^{2}$ & 0.020 \\
+		Residual Std. Error & 383,401.400 (df = 20338) \\
+		F Statistic & 410.717$^{***}$ (df = 1; 20338) \\
+		\hline
+		\hline \\[-1.8ex]
+		\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+	\end{tabular}
+\end{table} 
+
+\begin{table}[!htbp] \centering
+	\caption{Impact of SqFtLot and New Construction on AdjSalePrice}
+	\label{}
+	\begin{tabular}{@{\extracolsep{5pt}}lcc}
+		\\[-1.8ex]\hline
+		\hline \\[-1.8ex]
+		& \multicolumn{2}{c}{\textit{Dependent variable:}} \\
+		\cline{2-3}
+		\\[-1.8ex] & \multicolumn{2}{c}{AdjSalePrice} \\
+		\\[-1.8ex] & (1) & (2)\\
+		\hline \\[-1.8ex]
+		SqFtLot & 1.887$^{***}$ & 1.930$^{***}$ \\
+		& (0.093) & (0.093) \\
+		& & \\
+		NewConstruction &  & 59,531.190$^{***}$ \\
+		&  & (8,768.867) \\
+		& & \\
+		Constant & 542,505.900$^{***}$ & 535,727.000$^{***}$ \\
+		& (2,903.559) & (3,067.419) \\
+		& & \\
+		\hline \\[-1.8ex]
+		Observations & 20,340 & 20,340 \\
+		R$^{2}$ & 0.020 & 0.022 \\
+		Adjusted R$^{2}$ & 0.020 & 0.022 \\
+		Residual Std. Error & 383,401.400 (df = 20338) & 382,977.100 (df = 20337) \\
+		F Statistic & 410.717$^{***}$ (df = 1; 20338) & 228.859$^{***}$ (df = 2; 20337) \\
+		\hline
+		\hline \\[-1.8ex]
+		\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+	\end{tabular}
+\end{table}
+
+\end{document}
