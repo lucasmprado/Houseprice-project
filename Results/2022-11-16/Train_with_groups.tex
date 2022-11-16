@@ -1,0 +1,262 @@
+\documentclass[12pt,a4paper,landscape]{article}
+\usepackage{graphicx,textcomp}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage[reqno]{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{amssymb,enumerate}
+\usepackage[all]{xy}
+\usepackage{endnotes}
+\usepackage{lscape}
+\newtheorem{com}{Comment}
+\usepackage{float}
+\usepackage{hyperref}
+\newtheorem{lem} {Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{cor}{Corollary}
+\newtheorem{obs}{Observation}
+\usepackage[compact]{titlesec}
+\usepackage{dcolumn}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{multirow}
+\usepackage{xcolor}
+\newcolumntype{.}{D{.}{.}{-1}}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\definecolor{light-gray}{gray}{0.65}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\newcommand{\Sref}[1]{Section~\ref{#1}}
+\newtheorem{hyp}{Hypothesis}
+
+\title{Adjusted Sale Price}
+\date{16 Nov. 2022}
+\author{Quantitative Methods 1}
+
+\begin{document}
+	\maketitle
+
+\begin{table}[H] \centering 
+	\caption{Sale Prices by SqFtTotLiving, BldgGrade, ZipGroup and YrBuiltGroup} 
+	\label{}
+	\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-4} 
+		\\[-1.8ex] & \multicolumn{3}{c}{AdjSalePrice} \\ 
+		\\[-1.8ex] & (1) & (2) & (3)\\ 
+		\hline \\[-1.8ex] 
+		SqFtTotLiving & 186.830$^{***}$ & 182.369$^{***}$ & 187.072$^{***}$ \\ 
+		& (3.007) & (3.184) & (3.003) \\ 
+		& & & \\ 
+		BldgGrade & 77,330.470$^{***}$ & 114,662.900$^{***}$ & 80,520.830$^{***}$ \\ 
+		& (2,433.808) & (2,521.320) & (2,471.995) \\ 
+		& & & \\ 
+		ZipGroup & 70,723.630$^{***}$ &  & 71,369.320$^{***}$ \\ 
+		& (1,415.145) &  & (1,416.346) \\ 
+		& & & \\ 
+		YrBuiltGroup &  & $-$4,832.125$^{***}$ & $-$8,870.211$^{***}$ \\ 
+		&  & (1,321.599) & (1,248.695) \\ 
+		& & & \\ 
+		Constant & $-$641,383.100$^{***}$ & $-$680,140.400$^{***}$ & $-$641,150.900$^{***}$ \\ 
+		& (13,798.250) & (14,593.240) & (13,781.540) \\ 
+		& & & \\ 
+		\hline \\[-1.8ex] 
+		Observations & 20,340 & 20,340 & 20,340 \\ 
+		R$^{2}$ & 0.583 & 0.532 & 0.584 \\ 
+		Adjusted R$^{2}$ & 0.583 & 0.532 & 0.584 \\ 
+		Residual Std. Error & 250,083.700 (df = 20336) & 264,909.400 (df = 20336) & 249,780.100 (df = 20335) \\ 
+		F Statistic & 9,477.072$^{***}$ (df = 3; 20336) & 7,708.477$^{***}$ (df = 3; 20336) & 7,137.707$^{***}$ (df = 4; 20335) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+\end{table} 
+
+\begin{table}[H] \centering 
+	\caption{Sale Prices by SqFtTotLiving, BldgGrade, ZipGroup and NbrLivingUnits} 
+	\label{} 
+	\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-4} 
+		\\[-1.8ex] & \multicolumn{3}{c}{AdjSalePrice} \\ 
+		\\[-1.8ex] & (1) & (2) & (3)\\ 
+		\hline \\[-1.8ex] 
+		SqFtTotLiving & 186.830$^{***}$ & 180.691$^{***}$ & 186.143$^{***}$ \\ 
+		& (3.007) & (3.222) & (3.043) \\ 
+		& & & \\ 
+		BldgGrade & 77,330.470$^{***}$ & 114,089.000$^{***}$ & 78,041.290$^{***}$ \\ 
+		& (2,433.808) & (2,494.099) & (2,462.248) \\ 
+		& & & \\ 
+		ZipGroup & 70,723.630$^{***}$ &  & 70,673.330$^{***}$ \\ 
+		& (1,415.145) &  & (1,415.461) \\ 
+		& & & \\ 
+		as.factor(NbrLivingUnits)2 &  & 86,050.600$^{***}$ & 67,508.930$^{***}$ \\ 
+		&  & (16,951.480) & (16,003.740) \\ 
+		& & & \\ 
+		as.factor(NbrLivingUnits)3 &  & $-$1,456.539 & $-$50,873.280 \\ 
+		&  & (33,321.200) & (31,465.340) \\ 
+		& & & \\ 
+		as.factor(NbrLivingUnits)4 &  & $-$316,516.700$^{*}$ & $-$360,918.400$^{**}$ \\ 
+		&  & (187,462.600) & (176,936.300) \\ 
+		& & & \\ 
+		Constant & $-$641,383.100$^{***}$ & $-$688,132.400$^{***}$ & $-$645,892.600$^{***}$ \\ 
+		& (13,798.250) & (14,737.640) & (13,935.630) \\ 
+		& & & \\ 
+		\hline \\[-1.8ex] 
+		Observations & 20,340 & 20,340 & 20,340 \\ 
+		R$^{2}$ & 0.583 & 0.532 & 0.584 \\ 
+		Adjusted R$^{2}$ & 0.583 & 0.532 & 0.583 \\ 
+		Residual Std. Error & 250,083.700 (df = 20336) & 264,822.300 (df = 20334) & 249,949.000 (df = 20333) \\ 
+		F Statistic & 9,477.072$^{***}$ (df = 3; 20336) & 4,631.200$^{***}$ (df = 5; 20334) & 4,747.794$^{***}$ (df = 6; 20333) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+\end{table} 
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\hline
+			& Mod 1 & 2.Add reconvert bedrooms & 3.1.Add Zhvi interval & 3.2.Add Zhvi cluster \\
+			\hline
+			(Intercept)             & $-47126.10^{***}$ & $13946.28$         & $39564.94$         & $-19164.16$        \\
+			& $(4843.07)$       & $(22597.37)$       & $(23444.54)$       & $(23295.86)$       \\
+			SqFtTotLiving           & $294.36^{***}$    & $339.98^{***}$     & $339.43^{***}$     & $338.99^{***}$     \\
+			& $(2.13)$          & $(2.66)$           & $(2.66)$           & $(2.66)$           \\
+			Bedrooms\_2(1,2]        &                   & $-17043.19$        & $-18485.81$        & $-15465.31$        \\
+			&                   & $(23086.00)$       & $(23056.10)$       & $(23043.56)$       \\
+			Bedrooms\_2(2,3]        &                   & $-132543.04^{***}$ & $-134413.69^{***}$ & $-131267.91^{***}$ \\
+			&                   & $(22742.83)$       & $(22713.89)$       & $(22700.64)$       \\
+			Bedrooms\_2(3,4]        &                   & $-225529.89^{***}$ & $-226674.54^{***}$ & $-223809.95^{***}$ \\
+			&                   & $(23098.66)$       & $(23068.47)$       & $(23056.77)$       \\
+			Bedrooms\_2(4,5]        &                   & $-231789.80^{***}$ & $-233263.88^{***}$ & $-229441.76^{***}$ \\
+			&                   & $(24366.43)$       & $(24336.23)$       & $(24319.98)$       \\
+			Bedrooms\_2(5,6]        &                   & $-242997.63^{***}$ & $-240931.93^{***}$ & $-236839.17^{***}$ \\
+			&                   & $(30017.41)$       & $(29981.49)$       & $(29962.98)$       \\
+			Bedrooms\_2(6,33]       &                   & $-315636.60^{***}$ & $-314813.77^{***}$ & $-309753.46^{***}$ \\
+			&                   & $(43319.29)$       & $(43264.20)$       & $(43234.89)$       \\
+			zhvi\_idx2(0.757,0.797] &                   &                    & $1559.09$          &                    \\
+			&                   &                    & $(10311.70)$       &                    \\
+			zhvi\_idx2(0.797,0.838] &                   &                    & $1546.56$          &                    \\
+			&                   &                    & $(8642.55)$        &                    \\
+			zhvi\_idx2(0.838,0.878] &                   &                    & $-14956.94$        &                    \\
+			&                   &                    & $(11496.76)$       &                    \\
+			zhvi\_idx2(0.878,0.919] &                   &                    & $-40379.57^{***}$  &                    \\
+			&                   &                    & $(8097.74)$        &                    \\
+			zhvi\_idx2(0.919,0.959] &                   &                    & $-23981.79^{**}$   &                    \\
+			&                   &                    & $(7551.94)$        &                    \\
+			zhvi\_idx2(0.959,1]     &                   &                    & $-34166.91^{***}$  &                    \\
+			&                   &                    & $(7304.85)$        &                    \\
+			as.factor(ZhviGroup)2   &                   &                    &                    & $20212.61^{**}$    \\
+			&                   &                    &                    & $(7332.40)$        \\
+			as.factor(ZhviGroup)3   &                   &                    &                    & $35356.81^{***}$   \\
+			&                   &                    &                    & $(7475.35)$        \\
+			as.factor(ZhviGroup)4   &                   &                    &                    & $47219.63^{***}$   \\
+			&                   &                    &                    & $(7863.29)$        \\
+			as.factor(ZhviGroup)5   &                   &                    &                    & $66565.76^{***}$   \\
+			&                   &                    &                    & $(8457.58)$        \\
+			\hline
+			R$^2$                   & $0.48$            & $0.51$             & $0.51$             & $0.51$             \\
+			Adj. R$^2$              & $0.48$            & $0.51$             & $0.51$             & $0.51$             \\
+			Num. obs.               & $20340$           & $20340$            & $20340$            & $20340$            \\
+			\hline
+			\multicolumn{5}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+		\end{tabular}
+		\caption{Statistical models}
+		\label{table:coefficients}
+	\end{center}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\caption{}
+	\label{fig:regrouping-bedrooms}
+	\includegraphics[width=0.8\linewidth]{"Regrouping bedrooms"}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\caption{}
+	\label{fig:zhviindex-eploration}
+	\includegraphics[width=0.8\linewidth]{"zhvi_index eploration"}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\caption{}
+	\label{fig:zhviindex-grouped-by-automatic-intervals}
+	\includegraphics[width=0.8\linewidth]{"zhvi_index grouped by automatic intervals"}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\caption{}
+	\label{fig:zhviindex-grouped-by-cluster}
+	\includegraphics[width=0.8\linewidth]{"zhvi_index grouped by cluster"}
+\end{figure}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{l c}
+			\hline
+			& Model 1 \\
+			\hline
+			(Intercept)               & $-652457.19^{***}$ \\
+			& $(21814.58)$       \\
+			SqFtTotLiving             & $178.18^{***}$     \\
+			& $(3.39)$           \\
+			BldgGrade                 & $115513.19^{***}$  \\
+			& $(2579.86)$        \\
+			propertytypeSingle Family & $-39092.79^{*}$    \\
+			& $(17717.17)$       \\
+			propertytypeTownhouse     & $-61917.57^{**}$   \\
+			& $(19238.06)$       \\
+			\hline
+			R$^2$                     & $0.53$             \\
+			Adj. R$^2$                & $0.53$             \\
+			Num. obs.                 & $20340$            \\
+			\hline
+			\multicolumn{2}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+		\end{tabular}
+		\caption{Statistical models}
+		\label{table:coefficients}
+	\end{center}
+\end{table}
+
+\end{document}

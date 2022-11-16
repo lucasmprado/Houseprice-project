@@ -6,7 +6,7 @@ library("broom")
 library("stargazer")
 
 # Import train dataset:
-dat <- readRDS("data/train.rds")
+dat <- readRDS("~/GitHub/Houseprice-project/Data/train.rds")
 
 # Explore data
 dim(dat)
@@ -36,3 +36,53 @@ stargazer(mod1, mod2, mod3, title = "Adjusted Sale Price and Square Feet of Tota
 ggplot(dat, aes(SqFtTotLiving, AdjSalePrice, group = PropertyType)) +
   geom_point(alpha = 0.5, aes(colour = PropertyType)) +
   geom_smooth(method = "lm", aes(colour = PropertyType))
+
+# 16 Nov 2022:
+dat %>%
+  group_by(ZipCode) %>%
+  summarise(n = n()) %>%
+  arrange(desc(n)) %>%
+  ggplot(aes(as.factor(reorder(ZipCode, n)), n)) +
+  geom_col() +
+  coord_flip() +
+  xlab("Zip Code")
+
+zip_group <- dat %>%
+  group_by(ZipCode) %>%
+  summarise(med_price = median(AdjSalePrice),
+            count = n()) %>%
+  arrange(med_price) %>%
+  mutate(cumul_count = cumsum(count),
+         ZipGroup = ntile(cumul_count, 5))
+
+dat <- dat %>%
+  left_join(select(zip_group, ZipCode, ZipGroup), by = "ZipCode")
+
+mod4 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + ZipGroup, data = dat)
+
+stargazer(mod4, type = "text")
+
+#Grouping by year built:
+dat %>%
+  group_by(YrBuilt) %>%
+  summarise(n = n()) %>%
+  arrange(desc(n)) %>%
+  ggplot(aes(as.factor(reorder(YrBuilt, n)), n)) +
+  geom_col() +
+  coord_flip() +
+  xlab("Year Built")
+
+YrBuilt_group <- dat %>%
+  group_by(YrBuilt) %>%
+  summarise(med_price = median(AdjSalePrice),
+            count = n()) %>%
+  arrange(med_price) %>%
+  mutate(cumul_count = cumsum(count),
+         YrBuiltGroup = ntile(cumul_count, 5))
+
+dat <- dat %>%
+  left_join(select(YrBuilt_group, YrBuilt, YrBuiltGroup), by = "YrBuilt")
+
+mod5 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + ZipGroup + YrBuiltGroup, data = dat)
+
+stargazer(mod4, mod5, type = "text")
