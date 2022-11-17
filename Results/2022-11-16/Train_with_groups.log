@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.12)  16 NOV 2022 14:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.12)  17 NOV 2022 23:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -835,80 +835,136 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@dima=\skip64
 \bigstrutjot=\dimen303
 )
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks52
+\XKV@tempa@toks=\toks53
+)
+\XKV@depth=\count327
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.s
+ty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box74
+)
+\tc@llx=\dimen304
+\tc@lly=\dimen305
+\tc@urx=\dimen306
+\tc@ury=\dimen307
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen308
+\adjbox@Height=\dimen309
+\adjbox@Depth=\dimen310
+\adjbox@Totalheight=\dimen311
+\adjbox@pwidth=\dimen312
+\adjbox@pheight=\dimen313
+\adjbox@pdepth=\dimen314
+\adjbox@ptotalheight=\dimen315
+
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count328
+) (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box75
+\sift@deathcycles=\count329
+\@vwid@loff=\dimen316
+\@vwid@roff=\dimen317
+))
 (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count327
-\lst@gtempboxa=\box74
-\lst@token=\toks52
-\lst@length=\count328
-\lst@currlwidth=\dimen304
-\lst@column=\count329
-\lst@pos=\count330
-\lst@lostspace=\dimen305
-\lst@width=\dimen306
-\lst@newlines=\count331
-\lst@lineno=\count332
-\lst@maxwidth=\dimen307
+\lst@mode=\count330
+\lst@gtempboxa=\box76
+\lst@token=\toks54
+\lst@length=\count331
+\lst@currlwidth=\dimen318
+\lst@column=\count332
+\lst@pos=\count333
+\lst@lostspace=\dimen319
+\lst@width=\dimen320
+\lst@newlines=\count334
+\lst@lineno=\count335
+\lst@maxwidth=\dimen321
 
 (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count333
-\lst@skipnumbers=\count334
-\lst@framebox=\box75
+\c@lstnumber=\count336
+\lst@skipnumbers=\count337
+\lst@framebox=\box77
 )
 (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-\c@hyp=\count335
+\c@hyp=\count338
 
 (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count336
-\l__pdf_internal_box=\box76
+\l__color_backend_stack_int=\count339
+\l__pdf_internal_box=\box78
 ) (Train_with_groups.aux
 
 LaTeX Warning: Label `' multiply defined.
 
 
-LaTeX Warning: Label `table:coefficients' multiply defined.
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
 
 )
 \openout1 = `Train_with_groups.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count337
-\scratchdimen=\dimen308
-\scratchbox=\box77
-\nofMPsegments=\count338
-\nofMParguments=\count339
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count340
-\MPscratchDim=\dimen309
-\MPnumerator=\count341
-\makeMPintoPDFobject=\count342
-\everyMPtoPDFconversion=\toks54
+\scratchcounter=\count340
+\scratchdimen=\dimen322
+\scratchbox=\box79
+\nofMPsegments=\count341
+\nofMParguments=\count342
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count343
+\MPscratchDim=\dimen323
+\MPnumerator=\count344
+\makeMPintoPDFobject=\count345
+\everyMPtoPDFconversion=\toks56
 )
 (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -920,79 +976,55 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
  (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 (C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.47998pt on input line 67.
-Package hyperref Info: Link coloring OFF on input line 67.
+Package xypdf Info: Line width: 0.47998pt on input line 68.
+Package hyperref Info: Link coloring OFF on input line 68.
 
 (Train_with_groups.out) (Train_with_groups.out)
 \@outlinefile=\write7
 \openout7 = `Train_with_groups.out'.
 
-\c@lstlisting=\count343
+\c@lstlisting=\count346
  [1
 
 {C:/Users/lucas/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-Overfull \vbox (76.498pt too high) has occurred while \output is active []
-
-
-[3]
-Overfull \vbox (205.46477pt too high) has occurred while \output is active []
-
-
-[4]
-<Regrouping bedrooms.png, id=35, 461.47406pt x 338.01282pt>
+<Regrouping bedrooms.png, id=27, 461.47406pt x 338.01282pt>
 File: Regrouping bedrooms.png Graphic file (type png)
 <use Regrouping bedrooms.png>
-Package pdftex.def Info: Regrouping bedrooms.png  used on input line 210.
-(pdftex.def)             Requested size: 560.40762pt x 410.50795pt.
-
-Overfull \vbox (9.07336pt too high) has occurred while \output is active []
-
-
-[5 <./Regrouping bedrooms.png>]
-<zhvi_index eploration.png, id=42, 461.47406pt x 338.01282pt>
+Package pdftex.def Info: Regrouping bedrooms.png  used on input line 241.
+(pdftex.def)             Requested size: 362.37569pt x 265.42831pt.
+ [3]
+<zhvi_index eploration.png, id=33, 461.47406pt x 338.01282pt>
 File: zhvi_index eploration.png Graphic file (type png)
 <use zhvi_index eploration.png>
-Package pdftex.def Info: zhvi_index eploration.png  used on input line 217.
-(pdftex.def)             Requested size: 560.40762pt x 410.50795pt.
-
-Overfull \vbox (9.07336pt too high) has occurred while \output is active []
-
-
-[6 <./zhvi_index eploration.png (PNG copy)>]
-<zhvi_index grouped by automatic intervals.png, id=48, 461.47406pt x 338.01282p
+Package pdftex.def Info: zhvi_index eploration.png  used on input line 248.
+(pdftex.def)             Requested size: 362.37569pt x 265.42831pt.
+<zhvi_index grouped by automatic intervals.png, id=34, 461.47406pt x 338.01282p
 t>
 File: zhvi_index grouped by automatic intervals.png Graphic file (type png)
 <use zhvi_index grouped by automatic intervals.png>
 Package pdftex.def Info: zhvi_index grouped by automatic intervals.png  used on
- input line 224.
-(pdftex.def)             Requested size: 560.40762pt x 410.50795pt.
-
-Overfull \vbox (9.07336pt too high) has occurred while \output is active []
-
-
-[7 <./zhvi_index grouped by automatic intervals.png>]
-<zhvi_index grouped by cluster.png, id=56, 461.47406pt x 338.01282pt>
+ input line 255.
+(pdftex.def)             Requested size: 362.37569pt x 265.42831pt.
+ [4 <./Regrouping bedrooms.png> <./zhvi_index eploration.png (PNG copy)>]
+<zhvi_index grouped by cluster.png, id=42, 461.47406pt x 338.01282pt>
 File: zhvi_index grouped by cluster.png Graphic file (type png)
 <use zhvi_index grouped by cluster.png>
 Package pdftex.def Info: zhvi_index grouped by cluster.png  used on input line 
-231.
-(pdftex.def)             Requested size: 560.40762pt x 410.50795pt.
-
-Overfull \vbox (9.07336pt too high) has occurred while \output is active []
-
-
-[8 <./zhvi_index grouped by cluster.png>] [9] (Train_with_groups.aux)
+262.
+(pdftex.def)             Requested size: 362.37569pt x 265.42831pt.
+ [5 <./zhvi_index grouped by automatic intervals.png> <./zhvi_index grouped by 
+cluster.png>] (Train_with_groups.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1000,13 +1032,13 @@ Package rerunfilecheck Info: File `Train_with_groups.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26053 strings out of 478338
- 471574 string characters out of 2836700
- 787171 words of memory out of 3000000
- 43987 multiletter control sequences out of 15000+600000
+ 27177 strings out of 478338
+ 492567 string characters out of 2836700
+ 822463 words of memory out of 3000000
+ 45081 multiletter control sequences out of 15000+600000
  479243 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,3251b,436s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,12n,89p,3251b,436s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi8.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -1017,9 +1049,9 @@ s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lucas/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/lucas/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/lu
 cas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Train_with_groups.pdf (9 pages, 197367 bytes).
+Output written on Train_with_groups.pdf (5 pages, 195005 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

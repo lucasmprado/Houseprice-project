@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,landscape]{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage{graphicx,textcomp}
 \usepackage{natbib}
 \usepackage{setspace}
@@ -26,6 +26,7 @@
 \usetikzlibrary{arrows}
 \usepackage{multirow}
 \usepackage{xcolor}
+\usepackage{adjustbox}
 \newcolumntype{.}{D{.}{.}{-1}}
 \newcolumntype{d}[1]{D{.}{.}{#1}}
 \definecolor{light-gray}{gray}{0.65}
@@ -61,8 +62,8 @@
 \newtheorem{hyp}{Hypothesis}
 
 \title{Adjusted Sale Price}
-\date{16 Nov. 2022}
-\author{Quantitative Methods 1}
+\date{Connor, Linette, Lucas, Minh}
+\author{Quantitative Methods 1 (Tutorial)}
 
 \begin{document}
 	\maketitle
@@ -70,6 +71,7 @@
 \begin{table}[H] \centering 
 	\caption{Sale Prices by SqFtTotLiving, BldgGrade, ZipGroup and YrBuiltGroup} 
 	\label{}
+	\begin{adjustbox}{width=1\textwidth}
 	\begin{tabular}{@{\extracolsep{5pt}}lccc} 
 		\\[-1.8ex]\hline 
 		\hline \\[-1.8ex] 
@@ -102,12 +104,14 @@
 		\hline 
 		\hline \\[-1.8ex] 
 		\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-	\end{tabular} 
+	\end{tabular}
+	\end{adjustbox} 
 \end{table} 
 
 \begin{table}[H] \centering 
 	\caption{Sale Prices by SqFtTotLiving, BldgGrade, ZipGroup and NbrLivingUnits} 
-	\label{} 
+	\label{}
+	\begin{adjustbox}{width=1\textwidth}
 	\begin{tabular}{@{\extracolsep{5pt}}lccc} 
 		\\[-1.8ex]\hline 
 		\hline \\[-1.8ex] 
@@ -146,12 +150,41 @@
 		\hline 
 		\hline \\[-1.8ex] 
 		\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-	\end{tabular} 
+	\end{tabular}
+	\end{adjustbox}
 \end{table} 
 
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{l c c c c}
+\begin{table}[H] \centering
+	\caption{Sale Prices by SqFtTotLiving, BldgGrade, and propertytype} 
+	\label{}
+		\begin{tabular}{l c}
+			\hline
+			& Model 1 \\
+			\hline
+			(Intercept)               & $-652457.19^{***}$ \\
+			& $(21814.58)$       \\
+			SqFtTotLiving             & $178.18^{***}$     \\
+			& $(3.39)$           \\
+			BldgGrade                 & $115513.19^{***}$  \\
+			& $(2579.86)$        \\
+			propertytypeSingle Family & $-39092.79^{*}$    \\
+			& $(17717.17)$       \\
+			propertytypeTownhouse     & $-61917.57^{**}$   \\
+			& $(19238.06)$       \\
+			\hline
+			R$^2$                     & $0.53$             \\
+			Adj. R$^2$                & $0.53$             \\
+			Num. obs.                 & $20340$            \\
+			\hline
+			\multicolumn{2}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
+		\end{tabular}
+\end{table}
+
+\begin{table}[H] \centering
+	\caption{Sale Prices by SqFtTotLiving, Bedrooms, and zhvi\_idx} 
+	\label{}
+	\begin{adjustbox}{width=1\textwidth}
+	\begin{tabular}{l c c c c}
 			\hline
 			& Mod 1 & 2.Add reconvert bedrooms & 3.1.Add Zhvi interval & 3.2.Add Zhvi cluster \\
 			\hline
@@ -197,66 +230,36 @@
 			Num. obs.               & $20340$           & $20340$            & $20340$            & $20340$            \\
 			\hline
 			\multicolumn{5}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
-		\end{tabular}
-		\caption{Statistical models}
-		\label{table:coefficients}
-	\end{center}
+	\end{tabular}
+	\end{adjustbox}
 \end{table}
 
 \begin{figure}[H]
 	\centering
-	\caption{}
+	\caption{Regrouping more than 6 bedrooms into one group}
 	\label{fig:regrouping-bedrooms}
 	\includegraphics[width=0.8\linewidth]{"Regrouping bedrooms"}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\caption{}
+	\caption{Exploration of zhvi\_idx}
 	\label{fig:zhviindex-eploration}
 	\includegraphics[width=0.8\linewidth]{"zhvi_index eploration"}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\caption{}
+	\caption{zhvi\_idx grouped by dividing into intervals of 7}
 	\label{fig:zhviindex-grouped-by-automatic-intervals}
 	\includegraphics[width=0.8\linewidth]{"zhvi_index grouped by automatic intervals"}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\caption{}
+	\caption{zhvi\_idx grouped by cluster}
 	\label{fig:zhviindex-grouped-by-cluster}
 	\includegraphics[width=0.8\linewidth]{"zhvi_index grouped by cluster"}
 \end{figure}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{l c}
-			\hline
-			& Model 1 \\
-			\hline
-			(Intercept)               & $-652457.19^{***}$ \\
-			& $(21814.58)$       \\
-			SqFtTotLiving             & $178.18^{***}$     \\
-			& $(3.39)$           \\
-			BldgGrade                 & $115513.19^{***}$  \\
-			& $(2579.86)$        \\
-			propertytypeSingle Family & $-39092.79^{*}$    \\
-			& $(17717.17)$       \\
-			propertytypeTownhouse     & $-61917.57^{**}$   \\
-			& $(19238.06)$       \\
-			\hline
-			R$^2$                     & $0.53$             \\
-			Adj. R$^2$                & $0.53$             \\
-			Num. obs.                 & $20340$            \\
-			\hline
-			\multicolumn{2}{l}{\scriptsize{$^{***}p<0.001$; $^{**}p<0.01$; $^{*}p<0.05$}}
-		\end{tabular}
-		\caption{Statistical models}
-		\label{table:coefficients}
-	\end{center}
-\end{table}
 
 \end{document}

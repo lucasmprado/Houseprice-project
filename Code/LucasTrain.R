@@ -58,9 +58,9 @@ zip_group <- dat %>%
 dat <- dat %>%
   left_join(select(zip_group, ZipCode, ZipGroup), by = "ZipCode")
 
-mod4 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + ZipGroup, data = dat)
+mod1 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + ZipGroup, data = dat)
 
-stargazer(mod4, type = "text")
+stargazer(mod1, type = "text")
 
 #Grouping by year built:
 dat %>%
@@ -83,6 +83,38 @@ YrBuilt_group <- dat %>%
 dat <- dat %>%
   left_join(select(YrBuilt_group, YrBuilt, YrBuiltGroup), by = "YrBuilt")
 
-mod5 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + ZipGroup + YrBuiltGroup, data = dat)
+mod2 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + YrBuiltGroup, data = dat)
 
-stargazer(mod4, mod5, type = "text")
+mod3 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + ZipGroup + YrBuiltGroup, data = dat)
+
+stargazer(mod1, mod2, mod3, type = "text")
+stargazer(mod1, mod2, mod3)
+
+dat %>%
+  group_by(YrBuiltGroup, YrBuilt) %>%
+  summarise(n = n())
+
+mod4 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + as.factor(YrBuiltGroup), data = dat)
+
+stargazer(mod4, type = "text")
+
+unique(dat$NbrLivingUnits)
+
+# Number of living units:
+mod5 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + as.factor(NbrLivingUnits), data = dat)
+mod6 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + ZipGroup + as.factor(NbrLivingUnits), data = dat)
+stargazer(mod1, mod5, mod6, type = "text")
+stargazer(mod1, mod5, mod6)
+plot(mod5)
+mod6 <- lm(AdjSalePrice ~ NbrLivingUnits, data = dat)
+boxplot(mod6)
+boxplot(dat$AdjSalePrice ~ dat$NbrLivingUnits)
+
+mod2_aug <- augment(mod2)
+
+ggplot(mod2_aug, aes(Avg_Cont_Grants, Salary_9_mo)) +
+  geom_point(aes(colour = `as.factor(Rank_Code)`)) +
+  geom_line(data = mod2_aug, aes(y = .fitted, 
+                                 linetype = `as.factor(Rank_Code)`, 
+                                 colour = `as.factor(Rank_Code)`)) +
+  ggtitle("Grants and Rank Code (the right way)")
