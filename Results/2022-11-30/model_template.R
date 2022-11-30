@@ -41,6 +41,9 @@ summary(mod)
 # Plots
 pairs(train[c(9,12,16,22,24)])
 pairs(train[c(12,11,13,14,15)])
+ggplot(train, aes(SqFtTotLiving, AdjSalePrice, group = ZipGroup)) +
+  geom_point(aes(colour = ZipGroup)) +
+  geom_smooth(method = "lm", aes(colour = ZipGroup))
 
 ########## do not fill in below the line ###########
 

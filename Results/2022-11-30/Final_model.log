@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.19)  30 NOV 2022 11:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.19)  30 NOV 2022 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -987,62 +987,116 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 84.
+
+(model_template.R
+consecutive:
+)
 <AdjSalePrice_pairs.png, id=18, 593.21625pt x 361.35pt>
 File: AdjSalePrice_pairs.png Graphic file (type png)
 <use AdjSalePrice_pairs.png>
-Package pdftex.def Info: AdjSalePrice_pairs.png  used on input line 86.
+Package pdftex.def Info: AdjSalePrice_pairs.png  used on input line 88.
 (pdftex.def)             Requested size: 452.9679pt x 275.9301pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 [1
 
 {C:/Users/lucas/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./AdjSalePri
-ce_pairs.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+ce_pairs.png>] (model_template.R
+consecutive:
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+8.
+(C:\Users\lucas\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 18.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-<SqFtTotLiving_pairs.png, id=31, 593.21625pt x 361.35pt>
+(model_template.R
+consecutive:
+)
+<SqFtTotLiving_pairs.png, id=35, 593.21625pt x 361.35pt>
 File: SqFtTotLiving_pairs.png Graphic file (type png)
 <use SqFtTotLiving_pairs.png>
-Package pdftex.def Info: SqFtTotLiving_pairs.png  used on input line 97.
+Package pdftex.def Info: SqFtTotLiving_pairs.png  used on input line 103.
 (pdftex.def)             Requested size: 452.9679pt x 275.9301pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-
-Overfull \hbox (20.32582pt too wide) in paragraph at lines 108--109
+[2 <./SqFtTotLiving_pairs.png>]
+Overfull \hbox (20.32582pt too wide) in paragraph at lines 114--115
 \OT1/cmr/m/n/12 To com-plete the model, we added an in-ter-ac-tion ef-fect be-t
 ween \OT1/cmtt/m/n/12 ZipGroup \OT1/cmr/m/n/12 and \OT1/cmtt/m/n/12 SqFtTotLivi
 ng\OT1/cmr/m/n/12 .
  []
 
-[2 <./SqFtTotLiving_pairs.png>] [3] (Final_model.aux)
+(model_template.R
+consecutive:
+)
+<Rplot.png, id=57, 727.71875pt x 381.425pt>
+File: Rplot.png Graphic file (type png)
+<use Rplot.png>
+Package pdftex.def Info: Rplot.png  used on input line 120.
+(pdftex.def)             Requested size: 452.9679pt x 237.42389pt.
+
+Overfull \hbox (46.10268pt too wide) in paragraph at lines 129--130
+\OT1/cmr/m/n/12 The ef-fects of \OT1/cmtt/m/n/12 SqFtTotLiving\OT1/cmr/m/n/12 ,
+ \OT1/cmtt/m/n/12 BldgGrade\OT1/cmr/m/n/12 , \OT1/cmtt/m/n/12 as.factor(ZipGrou
+p)\OT1/cmr/m/n/12 , and \OT1/cmtt/m/n/12 SqFtTotLiving:ZipGroup
+ []
+
+(model_template.R
+consecutive:
+) [3 <./Rplot.png>] [4] (Final_model.aux)
 Package rerunfilecheck Info: File `Final_model.out' has not changed.
 (rerunfilecheck)             Checksum: 0497207CE1ED9580CC654EDD44252C43;373.
  ) 
 Here is how much of TeX's memory you used:
- 27154 strings out of 475385
- 491398 string characters out of 2776906
- 832806 words of memory out of 3000000
- 48018 multiletter control sequences out of 15000+600000
- 479670 words of font info for 72 fonts, out of 8000000 for 9000
+ 28250 strings out of 475385
+ 503363 string characters out of 2776906
+ 1108637 words of memory out of 3000000
+ 49057 multiletter control sequences out of 15000+600000
+ 480352 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,89p,3245b,439s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,11n,89p,3245b,1981s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1200.pk><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Final_model.pdf (3 pages, 83109 bytes).
+1000.pk> <C:\Users\lucas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1200.pk><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/lucas/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lucas/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lucas/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/luca
+s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Use
+rs/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+<C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmti12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Final_model.pdf (4 pages, 227852 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 47 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 52 words of extra memory for PDF output out of 10000 (max. 10000000)
 
