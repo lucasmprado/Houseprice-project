@@ -69,7 +69,7 @@
 
 \maketitle
 
-\section{Variable selection}
+\section{The intuition behind variable selection}
 
 	\noindent To predict the Adjusted Sale Price of houses, we considered three major factors:
 	
@@ -109,16 +109,16 @@
 	
 \vspace{.5cm}
 
-\section{Interaction effect}
+\section{The intuition behind the interaction effect}
 
-	To complete the model, we added an interaction effect between \texttt{ZipGroup} and \texttt{SqFtTotLiving}. The interaction reflects the idea that each additional square foot in the building will affect house prices differently depending on the neighborhood. As a consequence, the slope of \texttt{SqFtTotLiving} on \texttt{AdjSalePrice} in expensive neighborhoods will be steeper than in popular ones.
+	To complete the model, we added an interaction effect between \texttt{ZipGroup} and \texttt{SqFtTotLiving}. The interaction reflects the idea that each additional square foot in the building will affect house prices differently depending on the neighborhood. As a consequence, the slope of \texttt{SqFtTotLiving} on \texttt{AdjSalePrice} in expensive neighborhoods will be steeper than in popular ones (as can be seen in Figure 3).
 
 		\lstinputlisting[language=R, firstline=44, lastline=46]{model_template.R}
 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=1\linewidth]{Rplot}
-			\caption{}
+			\caption{The effect of \texttt{SqFtTotLiving} on \texttt{AdjSalePrice} by \texttt{ZipGroup}}
 			\label{fig:rplot}
 		\end{figure}
 

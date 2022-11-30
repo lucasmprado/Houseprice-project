@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.19)  30 NOV 2022 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.19)  30 NOV 2022 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1068,12 +1068,12 @@ p)\OT1/cmr/m/n/12 , and \OT1/cmtt/m/n/12 SqFtTotLiving:ZipGroup
 consecutive:
 ) [3 <./Rplot.png>] [4] (Final_model.aux)
 Package rerunfilecheck Info: File `Final_model.out' has not changed.
-(rerunfilecheck)             Checksum: 0497207CE1ED9580CC654EDD44252C43;373.
+(rerunfilecheck)             Checksum: 5E8D497B77162066DB40A6DE8B311D00;624.
  ) 
 Here is how much of TeX's memory you used:
  28250 strings out of 475385
  503363 string characters out of 2776906
- 1108637 words of memory out of 3000000
+ 1109031 words of memory out of 3000000
  49057 multiletter control sequences out of 15000+600000
  480352 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1094,7 +1094,7 @@ sy10.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmsy8.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><C:/Users/lucas/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Final_model.pdf (4 pages, 227852 bytes).
+Output written on Final_model.pdf (4 pages, 228200 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
